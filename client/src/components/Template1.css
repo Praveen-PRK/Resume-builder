@@ -1,0 +1,160 @@
+/* Container to simulate A4 paper */
+.resume-paper {
+  width: 794px; /* A4 width at 96 DPI */
+  min-height: 1123px;
+  height: auto !important;
+  margin: auto;
+  padding: 40px;
+  background: white;
+  color: #333;
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Placeholder Style */
+.placeholder-text {
+  color: #ccc !important;
+}
+
+/* Header */
+.resume-header {
+  text-align: center;
+  border-bottom: 2px solid #2c4ed8;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.resume-header h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #1A1C6A;
+  margin-bottom: 8px;
+}
+
+.contact-info {
+  font-size: 13px;
+  color: #666;
+}
+
+.separator {
+  margin: 0 10px;
+  color: #2c4ed8;
+}
+
+/* Sections */
+.section-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #2c4ed8;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.resume-section {
+  margin-bottom: 15px;
+}
+
+/* Typography specifics */
+.about-text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.experience-item, .project-item {
+  margin-bottom: 15px;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.company-name {
+  font-style: italic;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.item-desc, .project-bullets {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.project-bullets {
+  padding-left: 18px;
+  margin-top: 5px;
+}
+
+.tech-stack {
+  font-size: 12px;
+  background: #f0f2ff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #2c4ed8;
+}
+
+/* Layout Utilities */
+.resume-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.education-item {
+  margin-bottom: 10px;
+  font-size: 13.5px;
+}
+
+.year {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Skills Badges */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  background: #333;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.resume {
+    width: 210mm; /* Standard A4 Width */
+    min-height: 297mm;
+    height: auto !important;
+    padding: 20mm;
+    margin: 0 auto;
+    background: white;
+    box-shadow: none; /* Shadow looks bad on PDF */
+}
+
+@media print {
+  /* Force the window to show overflow during PDF render */
+  html, body, .builder-wrapper, .main-content {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Ensure your resume wrapper captures full document height */
+  .resume-paper {
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+}
